@@ -1,0 +1,4 @@
+gpt2_finetuning/*.zip 
+venv/ 
+__pycache__/ 
+*.pyc 

@@ -121,9 +121,8 @@ class BPETokenizer:
     def decode(self, ids: list) -> str:
         """Convert list of token ids back to text."""
         tokens = [self.id_to_token.get(i, "<unk>") for i in ids]
-        text = " ".join(tokens)
-        # Remove </w> markers and fix spacing
-        text = text.replace(" </w>", " ").replace("</w>", " ")
+        text = "".join(tokens)
+        text = text.replace("</w>", " ")
         return text.strip()
 
     def save(self, path: str):
